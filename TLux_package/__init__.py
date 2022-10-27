@@ -1,3 +1,4 @@
+
 def test_fct():
     '''A test function for checking if the package setup and install worked properly.'''
 
@@ -21,13 +22,7 @@ def kaya_fct(pop:float,gdp:float,enInt:float,carbInt:float):
     
     '''
 
-    try:
-        if pop < 0 or gdp < 0 or enInt <0 or carbInt < 0:
+    if pop < 0 or gdp < 0 or enInt < 0 or carbInt < 0:
         # raise ValueError
-            raise ValueError("Only positive values are allowed!")
-        else:
-            return(round(pop * gdp * enInt * carbInt, 2))
-    # if false then raise the value error
-    except ValueError as e:
-        print(e)
-    return
+        raise ValueError("Only positive values are allowed!")
+    return(round(pop * gdp * enInt * carbInt, 2))
